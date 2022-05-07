@@ -1,0 +1,20 @@
+{% extends 'base.html'%}
+{% block content %}
+<h1>Projection</h1>
+<h3>Variables</h3>
+<table class="table table-sm center">
+
+    <tr>{% for x in headings %}<th>{{ x }}</th>{% endfor %}</tr>
+    <tr>{% for x in formulae %}<th>{{ x }}</th>{% endfor %}</tr>
+
+    {% for row in grid %}
+    <tr>
+    {% for x in row %}
+    <td>{{ x }}</td>
+    {% endfor %}
+    </tr>
+    {% endfor %}
+</table>
+    <br><br>
+
+{% endblock %}
